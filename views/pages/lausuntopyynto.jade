@@ -1,0 +1,30 @@
+.page#page-lausuntopyynto
+    .content
+        h2 Foo
+
+        .article
+            .deadline
+                span.day 31
+                span.month syys
+                span.year 2011
+            h3 Foo bar baz
+            p
+                | Consectetuer adipiscing elit. Sed posuere interdum sem.
+                | Quisque ligula eros ullamcorper quis, lacinia quis
+                | facilisis sed sapien. Mauris varius diam vitae ...
+            span.created
+                a.creator(href='#') Olli Vetumainen
+                | , 12.2.2011
+    .aside
+        != partial('../elements/virtu-login')
+        != partial('../elements/login-info')
+        a.button.new-statement-request(href='/#/uusi-lausuntopyynto')
+            | Tee uusi
+            br
+            | lausuntopyyntö
+        h2 Ohjeteksti palvelun toiminnallisuuteen
+        p
+            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus.
+
+        p
+            | Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque.

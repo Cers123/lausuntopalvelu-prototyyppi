@@ -1,0 +1,97 @@
+.page#page-uusi-lausuntopyynto
+
+    .aside
+        != partial('../elements/login-info')
+        a.button.new-statement-request(href='/#/uusi-lausuntopyynto')
+            | Tee uusi
+            br
+            | lausuntopyyntö
+        h2 Näin laadit lausuntopyynnön ja yhteenvedon
+
+        p
+            strong 1. Luo pyyntö
+            br
+            | Laadi lausuntopyyntö ja lähetä se valitsemillesi sidosryhmille.
+
+        p
+            strong 2. Tarkastele
+            br
+            | Tarkastele lausuntopyynnön vastaanottajien toimintaa, annettujen lausuntojen määrää sekä eniten keskustelua herättäneitä kohtia lähdetekstissä.
+        p
+            strong 3. Valitse lausunnot
+            br
+            | Selaa annettuja lausuntoja, tee korostuksia lausuntoihin, sekä valitse olennaisimmat lausunnot yhteenvetoon.
+
+        p
+            strong 4. Tee yhteenveto
+            br
+            | Laadi yhteenveto annetuista lausunnoista omien korostustesi ja valintojesi pohjalta.
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#') Etusivu
+            li.active
+                span.left
+                span.link
+                    a(href='/#/uusi-lausuntopyynto') 1. Luo pyyntö
+                span.right
+            li.inactive
+                | 2. Tarkastele
+            li.inactive
+                | 3. Valitse lausunnot
+            li.inactive
+                | 4. Tee yhteenveto
+    .content
+        a.share.button(href='#')
+            span Jaa
+        h2 Luo lausuntopyyntö
+        form.ui-form#add-statement-request(autocomplete='off')
+            .field
+                label Otsikko
+                    span.required *
+                input(type='text', name='title')
+            .field.textarea
+                label Saateteksti
+                    span.required *
+                textarea(rows='5', name='cover_text', id='cover_text', class='editor')
+            .field.textarea
+                label Teksti
+                    span.required *
+                textarea(rows='8', name='text', id='text', class='editor')
+            .field.multiple
+                label Pyynnön allekirjoittajat
+                    span.required *
+                .inputs
+                    input(type='text', name='coauthors[0][email]', placeholder='Syötä allekirjoittajan nimi')
+                    a.add(href='#') +
+            .field.multiple#targets
+                label Jakelu
+                    span.required *
+                    br
+                    a.dummy.contacts-link(href="#") Avaa osoitekirja
+                .inputs
+                    input(type='text', name='targets[0][email]', placeholder='Syötä organisaation nimi tai e-mail')
+                    a.add(href='#') +
+            .field.multiple
+                label Diaarinumero
+                    span.required *
+                .inputs
+                    input(type='text', name='registration_number', placeholder='Syötä diaarinumero tai hankenumero')
+            .field.date
+                label Lähetetty
+                    span.required *
+                input(type='text', name='sent_at', placeholder='PP.KK.VVVV')
+            .field.date
+                label Määräaika
+                    span.required *
+                input(type='text', name='deadline', placeholder='PP.KK.VVVV')
+            .validation-error * Täytä kaikki vaaditut kentät
+            .field.submit
+                .extra-buttons
+                    a.pdf.text-link(href="#").dummy 
+                        | Tulosta lausuntopyyntö PDF-tiedostona
+                    a.button(href="#" ).dummy
+                        | Tallenna
+                a.button.submit(href='/#/tarkastele-pyyntoa')
+                    | Lähetä lausuntopyynnöt

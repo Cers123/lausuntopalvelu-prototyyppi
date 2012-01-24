@@ -1,0 +1,87 @@
+.page#page-valitse-lausunnot
+    .aside
+        != partial('../elements/login-info')
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#') Etusivu
+            li
+                a(href='/#/uusi-lausuntopyynto') 1. Luo pyyntö
+            li
+                a(href='/#/tarkastele-pyyntoa').navi-view-request 2. Tarkastele
+            li.active
+                span.left
+                span.link
+                    a(href='/#/valitse-lausunnot').navi-choose-statements 3. Valitse lausunnot
+                span.right
+            li.inactive
+                | 4. Tee yhteenveto
+    .content
+        h3 Valitse lausunnot ja tee merkintöjä
+        .article.full
+            .pagetop-info
+                .text
+                    p
+                        | Voit selata kaikkia annettuja lausuntoja, tai tarkastella niitä antajakohtaisesti. Lausunnot ja niiden mielipidejakauma on esitetty kappalekohtaisesti. Kunkin tekstikappaleen saat näkyviin klikkaamalla halutun kappaleen nimeä. Lisäksi voit tehdä merkintöjä olennaisimpiin lausuntoihin yhteenvetoa varten. Merkinnät tallentuvat automaattisesti.
+                .links
+                    p Suodata lausunnonantajia
+                    form.dropdown
+                        select(name='')
+                            option(value='').dropdown-filter
+                                .label
+            div(style='clear:both;')
+
+        .article.full.no-hr
+            .aside-legend
+                    span.statements lausunnot
+                    span.markings merkinnät
+            #text-links2
+                a(href="#").hide-all-link Piilota kaikki
+                    span.show-hide-icon
+                a(href="#").show-all-link Näytä kaikki
+                    span.show-hide-icon
+                a(href="#").show-help Näytä ohje
+                    span.show-help-icon
+
+        h2.title Kansalaisaloitemenettely
+        .article.full
+            form.choose-all
+                label
+                    input(type='checkbox', name='select-all-statements', value='include', id="select-all-statements")
+                    | Valitse kaikki lausunnot
+            .sections
+                .title#ss-chapter-id Otsikko
+                .section_comment_count.hide-all 8
+                .visible.hide-all
+                    .aside-notes
+                        a.toggle-note-mode(href='#', title='Klikkaa tästä, niin voit tehdä merkintöjä lausuntoihin maalaamalla niitä hiirellä.') Tee merkintöjä
+                    .source.text Tekstikappale
+                    .section_comments
+                        .statement-static
+                            .info
+                                a(href="#").name Kommentoija
+                                span.date Sample 1.1.1980
+                                span.opinion.agree.agrees Totta
+                                form
+                                    label
+                                        input(type='checkbox', name='include', value='include')
+                                        | Valitse mukaan yhteenvetoon
+                            p.comment_text Hyvää tavaraa
+
+
+        .button-row
+            a.button.submit(href='/#/luo-yhteenveto').navi-create-summary
+                | Tallenna
+                br
+                | ja jatka yhteenvetoon
+
+
+.aside-extra-template.hide-all
+    .aside-extra
+        span.statements.section_comment_count 7
+        span.markings 0
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar

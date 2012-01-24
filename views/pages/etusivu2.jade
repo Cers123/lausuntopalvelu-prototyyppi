@@ -1,0 +1,47 @@
+.page#page-etusivu2
+    .aside
+        .login-info.visible
+            h2 Tervetuloa, Maija-Leena!
+            span.logged-user Maija-Leena Mäkipää (SAK)
+            br
+            a.bullet(href='#').dummy Omat lausunnot
+            br
+            a.logout.button-2(href='#') kirjaudu ulos
+            div(style='clear:both;')
+        .aside-divider
+        h2 Näin lausuntopalvelu toimii
+        p
+            | Lausuntopalvelu on virkamiehille ja oikeusministeriön sidosryhmille suunnattu palvelu, jonka avulla on mahdollista antaa lausuntoja, luoda lausuntopyyntöjä sekä koostaa yhteenvetoja annetuista lausunnoista. Palvelun käyttäminen vaatii vahvan tunnistautumisen.
+
+        p
+            | Kirjautunut käyttäjä voi selailla julkisia lausuntopyyntöjä, sekä niiden keräämiä lausuntoja. Julkiset lausuntopyynnöt on listattu lausunnonantoajan mukaisessa järjestyksessä. Käyttäjälle kohdistetut lausuntopyynnöt näkyvät palvelun etusivulla tiedotteina.
+    .content
+        .notifications
+            h2 Käyttäjän tiedotteet
+
+            .article
+                .alert-icon
+                h3 Lausuntopyyntö - Ruuhkamaksujen käyttöönotto
+                p
+                    | Sisäministeriö pyytää sinulta lausuntoa kansalainen Petteri Ruposen
+                    | laatimaan lakialoitteeseen Ruuhkamaksujen käyttöönotosta.
+                a.button(href="/#/tarkastele-ennen-lausuntoa") Tarkastele lausuntopyyntöä
+                a.close x
+
+        h2 Selaa lausuntopyyntöjä
+
+        .statement-requests
+            .article.list-item
+                .deadline
+                    span.day 31
+                    span.month syys
+                    span.year 2011
+                h3.title Lausuntopyynnön otsikko
+                p.cover_text
+                    | Consectetuer adipiscing elit. Sed posuere interdum sem.
+                    | Quisque ligula eros ullamcorper quis, lacinia quis
+                    | facilisis sed sapien. Mauris varius diam vitae ...
+                span.created.author
+                    a.creator.name(href='#').dummy Paavo Pekkala
+                    span ,&nbsp;
+                    span.created_at 12.2.2011

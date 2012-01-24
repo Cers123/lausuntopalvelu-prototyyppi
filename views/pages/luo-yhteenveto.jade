@@ -1,0 +1,86 @@
+.page#page-luo-yhteenveto
+
+    .aside
+        != partial('../elements/login-info')
+        h2 Yhteenvetoraportti
+        .report
+            p
+                | Yhteenvetonäkymään valitut lausunnonantajat:
+            form.dropdown
+                select(name='').respondents
+                    option(value='').respondentname
+                        .label Ei valittuja lausuntoja
+            br
+            p
+                | Lausuntoihin tehdyt merkinnät:
+            a.bullet.summary(href='#') Näytä merkinnät
+            p.small
+                | Klikkaamalla linkkiä saat tehdyt merkinnät näkyviin ja pois näkyvistä
+            br
+        h3 Lausuntojen jakauma
+        span.label Mielipidejakauma
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar
+        .legend
+            span.agree Samaa mieltä
+            span.disagree Eri mieltä
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#') Etusivu
+            li
+                a(href='/#/uusi-lausuntopyynto') 1. Luo pyyntö
+            li
+                a(href='/#/tarkastele-pyyntoa').navi-view-request 2. Tarkastele
+            li
+                a(href='/#/valitse-lausunnot').navi-choose-statements 3. Valitse lausunnot
+            li.active.end
+                span.left
+                span.link 4. Tee yhteenveto
+    .content
+        h3 Tarkastele valitsemiasi lausuntoja ja laadi yhteenveto
+        .article.full
+            .pagetop-info
+                p
+                    | Sivu näyttää yhteenvetoon valitut lausunnot kappalekohtaisesti. Voit tarkastella valitsemiasi lausuntoja ennen yhteenvedon laatimista, ja käyttää tekemiäsi merkintöjä laatimisen apuna. Kaikki valittuihin lausuntoihin tehdyt merkinnät saa näkyviin sivupalkin "Näytä merkinnät" -linkistä. Sivupalkista voit myös suodattaa näkyviä lausuntoja lausujakohtaisesti ja tarkastella lausuntojen yleistä mielipidejakaumaa.
+            div(style='clear:both;')
+
+        a.share.button(href='#')
+            span Jaa
+        .article.full
+            h2.title Kansalaisaloitetyöryhmän mietintö
+            #text-links1
+                a(href="#").hide-all-link Piilota kaikki
+                    span.show-hide-icon
+                a(href="#").show-all-link Näytä kaikki
+                    span.show-hide-icon
+
+            .sections
+                .summarytitle#summary-chapter-id Otsikko
+                .collapsed-statements.hide-all
+
+            br
+            a.pdf(href="#").dummy Tallenna näkymä PDF-tiedostona
+            a.print(href="#").dummy(style="margin-left:24px;") Tulosta näkymä
+
+        h2 Laadi yhteenveto
+        form.ui-form
+            .field.textarea
+                textarea(rows='8', name='summary', id='summary', class="editor")
+
+        .button-row
+            a.button.submit.store_summary(href='#').navi-choose-statements
+                | Tallenna yhteenveto
+
+
+.statement-template.hide-all
+    .statement.hide-more
+        .info.summary
+            a(href="#").name Vastaaja
+            span.date Päiväys
+            span.opinion Eri mieltä
+        p.text.hide-all
+            | Kaikenlaista

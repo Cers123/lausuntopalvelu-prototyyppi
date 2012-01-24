@@ -1,0 +1,103 @@
+.page#page-tarkastele-pyyntoa
+    
+    .aside
+        != partial('../elements/virtu-login')
+        != partial('../elements/login-info')
+        h2 Yhteenvetoraportti
+        p Lausuntopyyntöjen määräaika
+            br
+            strong 8.1.2012
+        p Yhteenvedon määräaika
+            br
+            strong 28.6.2012
+        .report
+            p
+                | Vastaanotetut lausunnot:
+            a.bullet(href='#') Sosiaali- ja Terveysministeriö
+            a.bullet(href='#') Eduskuntaryhmä: Vihreät
+            a.bullet(href='#') Näkövammaisten keskusliitto
+        h3 Eniten keskustelua herättäneet kappaleet
+        span.label.title 2.3 Euroopan unionin kansalaisaloite
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar
+        span.label.title 4 Esityksen vaikutukset
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar
+        span.label.title 4.4 Taloudelliset vaikutukset
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar
+        span.label.title 5 Asian valmistelu
+        span.opinion-distribution
+            div.red-bar
+            div.divider
+            div.green-bar
+        .legend
+            span.agree Samaa mieltä
+            span.disagree Eri mieltä
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#') Etusivu
+            li
+                a(href='/#/uusi-lausuntopyynto') 1. Luo pyyntö
+            li.active
+                span.left
+                span.link
+                    a(href='/#/tarkastele-pyyntoa') 2. Tarkastele
+                span.right
+            li.inactive
+                | 3. Valitse lausunnot
+            li.inactive
+                | 4. Tee yhteenveto
+    .content
+        h2 Tarkastele lausuntopyyntöä
+            span.statement-name Kansalaisaloitemenettely
+
+        .article
+            .deadline
+                span.day 31
+                span.month syys
+                span.year 2011
+            h3 Saateteksti
+            p
+                | Arvoisa vastaanottaja
+            p
+                | Oikeusministeriö pyytää kunnioittavasti lausuntoanne kansalaisaloitetyöryhmän mietinnöstä ”Kansalaisaloitemenettely” (Oikeusministeriön mietintöjä ja lausuntoja 21/2011).
+            p
+                | Työryhmän mietintö on saatavissa internetissä osoitteesta
+                a(href="#") http://www.om.fi/Etusivu/Julkaisut/Mietintojajalausuntoja/Mietintojenjalausuntojenarkisto/Mietintojajalausuntoja2011/1302672069578
+                br
+                | ja vaihtoehtoisesti osoitteesta
+                a(href="#") http://www.om.fi/Etusivu/Julkaisut/Mietintojajalausuntoja 
+            p
+                | Lausunto pyydetään ystävällisesti toimittamaan viimeistään keskiviikkona 15.6.2011. Lausuntoa ei tarvitse erikseen lähettää postitse. 
+            p
+                | Lisätietoja asiasta antaa lainsäädäntöneuvos Tuula Majuri, puh. (09) 1606 7697, tuula.majuri@om.fi
+            p    
+                | Osastopäällikön sijainen,
+                br
+                |lainsäädäntöjohtaja Asko Välimaa
+        .article
+            h3 Lausuntopyynnön vastaanottajat ja status
+            ul.recipients
+                li.recipient.confirmed SKP
+                li.recipient.pending Sosiaali- ja Terveysministeriö
+                li.recipient.confirmed Eduskuntaryhmä: Vihreät
+                li.recipient.pending Väestörekisterikeskus
+                li.recipient.confirmed Näkövammaisten keskusliitto
+                li.recipient.pending SAK
+                li.recipient.confirmed Maan Ystävät
+                li.recipient.pending Luonnonsuojeluliitto
+            div(style="clear:both;")
+        
+        .button-row
+            .green-btn
+                a(href="/#/valitse-lausunnot").dummy Siirry tarkastelemaan vastaanotettuja lausuntoja
+                span.arrows

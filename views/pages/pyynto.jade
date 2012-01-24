@@ -1,0 +1,69 @@
+.page#page-pyynto
+
+    .aside
+        != partial('../elements/login-info')
+        h2 Yhteenvetoraportti
+        p Lausuntopyyntöjen määräaika
+            br
+            strong.nicedeadline 8.1.2012
+        p Yhteenvedon määräaika
+            br
+            strong.summarydeadline 28.6.2012
+        .report
+            p
+                | Vastaanotetut lausunnot:
+            .responded
+                a.bullet.email(href='#').dummy Ei lausuntoja
+        h3 Eniten keskustelua herättäneet kappaleet
+        .mc_container
+            .most_commented
+                span.label Ei lausuntoja
+        .legend
+            span.agree Samaa mieltä
+            span.disagree Eri mieltä
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#') Etusivu
+            li
+                a(href='/#/uusi-lausuntopyynto') 1. Luo pyyntö
+            li.active
+                span.left
+                span.link
+                    a(href='/#/tarkastele-pyyntoa').navi-view-request 2. Tarkastele
+                span.right
+            li.inactive
+                | 3. Valitse lausunnot
+            li.inactive
+                | 4. Tee yhteenveto
+    .content
+        h2.statement-name.title Kansalaisaloitemenettely
+
+        .article
+            .deadline
+                span.day 31
+                span.month syys
+                span.year 2011
+            h3 Saateteksti
+            .cover_text
+        .article
+            h3 Lausuntopyynnön vastaanottajat ja status
+            ul.targets.recipients
+                li.recipient.pending.email.target
+            div(style="clear:both;")
+
+        .button-row
+            .green-btn
+                a(href="/#/valitse-lausunnot").navi-choose-statements Siirry tarkastelemaan vastaanotettuja lausuntoja
+                span.arrows
+
+    .most_commented_template.hide-all
+        span.label.title 2.3 Euroopan unionin kansalaisaloite
+        span.opinion-distribution
+            div.red-bar.disagrees
+            div.divider
+            div.green-bar.agrees
+
+    .responded_template.hide-all
+        a.bullet.email(href='#').dummy Sosiaali- ja Terveysministeriö

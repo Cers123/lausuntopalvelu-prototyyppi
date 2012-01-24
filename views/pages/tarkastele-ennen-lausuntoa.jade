@@ -1,0 +1,53 @@
+.page#page-tarkastele-ennen-lausuntoa
+
+    .aside
+        .login-info.visible
+            h2 Tervetuloa, Maija-Leena!
+            span.logged-user Maija-Leena Mäkipää (SAK)
+            br
+            a.bullet(href='#').dummy Omat lausunnot
+            br
+            a.logout.button-2(href='#') kirjaudu ulos
+            div(style='clear:both;')
+        .aside-divider
+        h2 Lausuntopyynnön määräaika
+        p.static.nicedeadline
+            | 31.09.2012
+        h2 Näin laadit lausunnon
+
+        p
+            strong 1. Tarkastele pyyntöä
+            br
+            | Tarkastele lausuntopyynnön ja saatekirjeen sisältöä
+
+        p
+            strong 2. Anna lausunto
+            br
+            | Tutustu lähdetekstiin ja ilmaise mielipiteesti kappalekohtaisesti tai koko dokumenttia käsittelevänä lausuntona.
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#/etusivu2') Etusivu
+            li.active
+                span.left
+                span.link
+                    a(href='/#/tarkastele-ennen-lausuntoa') 2. Tarkastele
+                span.right
+            li.inactive
+                | 3. Anna lausunto
+    .content
+        h2.statement-name.title Kansalaisaloitemenettely
+
+        .article
+            .deadline
+                span.day 31
+                span.month syys
+                span.year 2011
+            h3 Saateteksti
+            .cover_text
+
+        .button-row
+            .green-btn
+                a(href="/#/uusi-lausunto") Siirry antamaan lausunto
+                span.arrows

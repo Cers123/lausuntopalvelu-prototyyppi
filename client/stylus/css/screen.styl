@@ -1,0 +1,1334 @@
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/open-sans/OpenSans-Regular-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg')
+  font-weight 400
+  font-style normal
+
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/open-sans/OpenSans-Italic-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Italic-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Italic-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg')
+  font-weight 400
+  font-style italic
+
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/open-sans/OpenSans-Bold-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg')
+  font-weight 700
+  font-style normal
+
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/open-sans/OpenSans-BoldItalic-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-BoldItalic-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg')
+  font-weight 700
+  font-style italic
+
+
+@font-face
+  font-family 'OpenSansSemibold'
+  src url('../fonts/open-sans/OpenSans-Semibold-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg')
+  font-weight normal
+  font-style normal
+
+@font-face
+  font-family 'OpenSansSemibold'
+  src url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.eot')
+  src url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg')
+  font-weight normal
+  font-style italic
+
+@font-face
+    font-family 'MuseoSlab'
+    src url('../fonts/museo-slab/museo_slab_500-webfont.eot')
+    src url('../fonts/museo-slab/museo_slab_500-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/museo-slab/museo_slab_500-webfont.woff') format('woff'), url('../fonts/museo-slab/museo_slab_500-webfont.ttf') format('truetype'), url('../fonts/museo-slab/museo_slab_500-webfont.svg#MuseoSlab500') format('svg')
+    font-weight normal
+    font-style normal
+
+
+.ui-form
+  .field
+    padding 12px 0
+    label
+      width 200px
+      display inline-block
+      vertical-align top
+      padding 4px 0
+      .required
+        font-size 13px
+        font-weight normal
+        color #F57F02
+        margin-left 6px
+    input, textarea
+      width 405px
+      border 1px solid #a1a1a1
+      vertical-align top
+      padding 5px
+      font-family 'OpenSans'
+      font-size 14px
+      border-radius 4px
+      margin 0
+  .field.date
+    input
+      width 120px
+    .ui-datepicker-trigger
+      margin 4px
+      vertical-align top
+      cursor pointer
+  .static
+    padding 0 0 12px 0
+    input
+      padding 5px 0
+      background none
+      border none
+      font-size 16px
+      font-family 'OpenSansSemibold'
+      color #216885
+    input:focus
+      box-shadow none
+      border none
+      background #FFF
+  .field.multiple
+    .inputs
+      display inline-block
+      width 405px
+      position relative
+      input
+        width 370px
+        margin-bottom 4px
+        vertical-align middle
+      .remove
+        display inline-block
+        width 9px
+        height 10px
+        background transparent url('../img/cross.png') no-repeat center top
+        text-indent -9999px
+        vertical-align middle
+        margin-left -19px
+      .remove:hover
+        background-position center -10px
+      .add
+        width 30px
+        height 30px
+        display block
+        position absolute
+        right 0
+        bottom 5px
+        background transparent url('../img/plus-icon.png') no-repeat center top
+        margin-left 4px
+        text-indent -99999px
+      .add:active
+        background-position center bottom
+      .suggestions
+        margin -4px 0 0 0
+        padding 4px 0 0 0
+        position absolute
+        list-style none
+        border 1px solid #2685A4
+        border-top-width 0px
+        background #fff
+        z-index 999
+        li
+          display block
+          background #fff
+          width 358px
+          padding 5px
+          cursor pointer
+          .title
+            font-family 'OpenSansSemibold'
+          .meta
+            color #a0a0a0
+            font-size 0.9em
+            margin-left 8px
+        li.active
+          background #f0f5f7
+    a.contacts-link
+      margin-top 8px
+
+  .submit
+    .button
+      float right
+      font-size 14px
+    .extra-buttons
+      display inline-block
+      width 390px
+  .field.textarea
+    background transparent url('../img/hr.png') repeat-x left bottom
+    padding-bottom 14px
+  .validation-error
+    text-align right
+    color #F57F02
+    font-style italic
+    font-size 14px
+    font-family OpenSansSemibold
+    padding-top 10px
+    display none
+  input:focus,
+  textarea:focus
+    border-color #2685A4
+    box-shadow 0px 0px 5px #2685A4
+
+.form-statement
+  padding 8px
+  .field.textarea
+    background none
+    padding 0
+  .textarea
+    background none
+    textarea
+      width 100%
+      background-color #FFF
+
+body
+  font-family 'OpenSans'
+  background #fcfdfd url('../img/body-back.png') repeat-x left top
+  padding 0
+  margin 0
+  color #333
+  font-size 14px
+
+a
+  color #216885
+  text-decoration none
+
+a:hover
+  color #333
+
+a:active, a:focus, input:active, input:focus, textarea:active, textarea:focus
+  outline none
+
+a img
+  border none
+
+a.button
+  display block
+  background #2685a4 url('../img/button-back.png') repeat-x left top
+  color #fff
+  padding 11px 16px 12px 16px
+  text-align center
+  border-radius 8px
+  text-shadow 0px -1px 1px #007594
+  font-family 'OpenSansSemibold'
+  box-shadow 0px 2px 5px #cccfd2
+  font-size 16px
+  position relative
+  zoom 1
+  behavior url("/css/PIE.htc")
+
+a.button:hover
+  text-shadow 0px 0px 5px rgba(255,255,255,0.25)
+
+a.button:active
+  background-image none
+
+a.button-2
+  display block
+  background #495764 url('../img/button-2-back.png') repeat-x left top
+  color #fff
+  padding 3px 8px 4px 8px
+  text-align center
+  border-radius 3px
+  text-shadow 0px -1px 1px #495764
+  font-family 'OpenSans'
+  font-weight normal
+  box-shadow 0px 2px 5px #cccfd2
+  font-size 13px
+  line-height 18px
+  position relative
+  zoom 1
+  behavior url("/css/PIE.htc")
+
+a.button-2:hover
+  text-shadow 0px 0px 5px rgba(255,255,255,0.25)
+
+a.button-2:active
+  background-image none
+
+a.bullet
+  background transparent url('../img/arrow-bullet.png') no-repeat 4px 3px
+  padding-left 20px
+
+a.share
+  float right
+  margin-top 18px
+  padding 3px 8px 4px 8px
+  font-size 13px
+  border-radius 4px
+  z-index 100
+  span
+    padding-left 16px
+    background transparent url('../img/lock-icon.png') no-repeat left center
+
+a.ready
+  float right
+  margin-top 18px
+  padding 3px 8px 4px 8px
+  font-size 13px
+  border-radius 4px
+
+a.pdf, a.doc, a.print
+  padding-left 24px
+  line-height 28px
+a.pdf
+  background url(../img/file-pdf.png) no-repeat left center
+a.doc
+  background url(../img/file-doc.png) no-repeat left center
+a.print
+  background url(../img/print.png) no-repeat left center
+
+.wrap
+  width 960px
+  padding 0 10px
+  margin 0 auto
+
+#top-disclaimer
+  background #4a5765
+  color #fff
+  padding 5px
+  text-align center
+  a
+    color #d9ebf8
+  a:hover
+    color #fff
+
+#header
+  padding-top 10px
+  .wrap
+    position relative
+    background transparent url('../img/header-back.png') no-repeat center bottom
+    height 95px
+    h1
+      float left
+      margin 0
+      padding 18px 10px 10px 16px
+      a
+        width 395px
+        height 56px
+        display block
+        text-indent -99999px
+        background transparent url('../img/logo.png') no-repeat center top
+
+    #search
+      margin-top 27px
+      float right
+      position relative
+      background transparent url('../img/search-back.png') no-repeat center top
+      width 319px
+      height 42px
+      .keyword
+        font-size 14px
+        border-radius 8px
+        border none
+        margin 12px
+        padding 0
+        font-style italic
+        width 300px
+        background transparent
+      .keyword:focus
+        outline none
+      .go
+        position absolute
+        top 4px
+        right 4px
+        width 33px
+        height 34px
+        background transparent url('../img/search-button.png') no-repeat center top
+        border none
+      .go:active
+        background-position center bottom
+
+    #accessibility
+      position absolute
+      top 0
+      right 10px
+      font-size 13px
+      line-height 13px
+      .lang
+        margin-right 20px
+      .font-size
+        a
+          margin-left 4px
+        .small
+          font-size 1em
+        .medium
+          font-size 1.1em
+        .large
+          font-size 1.2em
+        .selected
+          color #000
+
+
+#main
+  .wrap
+    background transparent url('../img/main-back.png') repeat-y center top
+
+  .content
+    width 608px
+    float left
+    padding 13px 16px
+    h2
+      color #216885
+      margin 0
+      padding 16px 0 16px 0
+      span
+        margin-left 6px
+    h3.field-label
+          margin 16px 0 0 0
+
+    .article
+      padding 24px 0px 26px 64px
+      position relative
+      background transparent url('../img/hr.png') repeat-x center bottom
+      word-wrap break-word
+      .sections
+        margin-top 16px
+      .deadline
+        position absolute
+        top 25px
+        left 0
+        width 52px
+        height 70px
+        background transparent url('../img/document-icon.png') no-repeat center top
+        text-shadow 1px 1px 1px #fff
+        color #808080
+        font-family MuseoSlab
+        .day
+          display block
+          text-align center
+          font-size 22px
+          line-height 22px
+          margin-top 11px
+          color #f57e02
+          font-weight normal
+        .month
+          display block
+          font-size 9px
+          text-align center
+        .year
+          display block
+          font-size 11px
+          text-align center
+      h3
+        font-size 16px
+        line-height 16px
+        font-family 'OpenSansSemibold'
+        margin 0
+        padding 0 0 5px 0
+      p
+        font-size 14px
+        line-height 16px
+        margin 16px 0
+        padding 0
+      .created
+        display block
+        font-size 13px
+        font-style italic
+        margin-top 3px
+      .button
+        float right
+        font-size 14px
+        display block
+        line-height 14px
+        margin-top 16px
+      ul.recipients
+        list-style none
+        width 608px
+        float left
+        margin-left -64px
+        padding 0
+        font-size 13px
+        li
+          width 226px
+          margin-left 64px
+          float left
+          line-height 13px
+          padding 4px 5px 5px 6px
+          background-color #e7e7e7
+          border 1px solid #FFF
+          margin-bottom 3px
+          border-radius 4px
+          -webkit-box-shadow 0px 1px 2px #6d6d6d
+          -mox-box-shadow 0px 1px 2px #6d6d6d
+          box-shadow 0px 1px 2px #6d6d6d
+          /*position relative
+          zoom 1
+          behavior url(/js/PIE.htc)*/
+        li.confirmed
+          background url('../img/recipient-ok.png') no-repeat top right
+          background-color #ebebeb
+        li.pending
+          background url('../img/recipient-pending.png') no-repeat 219px center
+          color #777
+          cursor pointer
+      .pagetop-info
+        width 100%
+        p, a
+          margin 0
+          font-size 13px
+        p
+          line-height 18px
+        .text
+          width 49%
+          float left
+        .dropdown
+          margin-top 8px
+          border-radius 6px
+          border 3px solid #f9f9f9
+          select
+            background-color #FFF
+            width 100%
+            height 32px
+            font-size 14px
+            color #333
+            padding 4px 0
+            border 1px solid #bababa
+            border-radius 6px
+            option
+              padding 4px 2px
+        .links
+          float right
+          width 48%
+        .attachments
+          margin-top 16px
+
+      h2
+        .no-bg
+          background none
+          text-align left
+          top 24px
+      .no-padding
+        padding 0
+      .title, .summarytitle, .plaintitle
+        h1, h2, h3, h4, h5, h6
+          margin-top 10px
+          margin-bottom 0px
+          font-family 'OpenSansSemibold'
+          font-weight normal
+          position relative
+          line-height 22px
+          padding 0 0 2px 2px
+          color #333
+        h1
+          margin-left 0px
+          font-size 16px
+          padding-bottom 3px
+        h2
+          margin-left 16px
+          font-size 15px
+          padding-bottom 3px
+          span
+            margin-left 0
+        h3
+          margin-left 32px
+          font-size 14px
+        h4, h5, h6
+          margin-left 48px
+          font-size 14px
+      .text-and-statement
+        h1, h2, h3, h4, h5, h6
+          height 22px
+          line-height 22px
+          height 20px
+          cursor pointer
+          border-bottom 1px solid #FFF
+          background #dadada url(../img/arrow-right.png) no-repeat right 4px
+      .open
+        h1, h2, h3, h4, h5, h6
+          background #dadada url(../img/arrow-down.png) no-repeat right 6px
+          margin-bottom 0
+      .no-marginright
+        margin-right 0
+      .h1
+        margin-left 0
+      .h2
+        margin-left 16px
+      .h3
+        margin-left 32px
+      .h4, .h5, .h6
+        margin-left 48px
+      .visible, .collapsed-statements
+        background-color #f2f2f2
+        position relative
+        .source
+          background #FFF
+          margin 0 0 2px 0
+          p
+            margin 0
+            font-size 13px
+            padding 8px
+        .no-bg
+          background none
+          padding 8px 0
+        .statement, .statement-static
+          border-left 4px solid #e9e2af
+          margin-left 16px
+          margin-bottom 2px
+          background #fdfbec url(../img/arrow-down-grey.png) no-repeat right 5px
+          font-size 13px
+          .info
+            padding 8px 8px 0 8px
+            .date
+              margin-left 6px
+            .opinion
+              margin-left 16px
+              padding-left 14px
+            form
+              float right
+              margin-bottom 8px
+              input
+                vertical-align top
+                margin-right 6px
+            .agree
+              background url(../img/marker-agree.png) no-repeat left center
+            .disagree
+              background url(../img/marker-disagree.png) no-repeat left center
+            .remove
+              display inline-block
+              height 13px
+              font-size 13px
+              vertical-align middle
+              float right
+              .remove-btn
+                float right
+                width 10px
+                height 9px
+                margin 5px 0 0 6px
+                background transparent url('../img/cross.png') no-repeat right top
+              .remove-btn:hover
+                background-position center -10px
+          .comment_text, .text
+            padding 8px
+            margin 0
+            font-size 13px
+          .summary
+            padding 0 8px
+            cursor pointer
+        .no-marginleft
+          margin-left 0
+        .hide-more
+          background #fdfbec url(../img/arrow-right-grey.png) no-repeat right 3px
+        .statement-static
+          background #fdfbec
+          p.text
+            display block
+      .aside-extra
+        position absolute
+        right -308px
+        top -4px
+        width 262px
+        height 33px
+        line-height 30px
+        font-size 14px
+        color #333
+        font-family 'OpenSans'
+        font-weight normal
+        background url('../img/statement-info-bg.png') no-repeat left top
+      .aside-extra .statements, .aside-legend .statements
+          background url('../img/bubble-white.png') no-repeat left center
+          padding-left 22px
+          margin 0 16px 0 20px
+      .aside-extra .markings, .aside-legend .markings
+          background url('../img/pen-yellow.png') no-repeat left center
+          padding-left 22px
+      .aside-legend
+        float right
+        margin-right -305px
+        width 262px
+        line-height 16px
+        line-height 16px
+        font-size 14px
+        color #333
+        font-family 'OpenSans'
+        font-weight normal
+        background none
+      span.highlight
+        position relative
+        background-color #faff74
+        .close
+          margin 0 0 0 -15px
+          border 3px solid #faff74
+          border-bottom-width 0px
+          cursor pointer
+          width 9px
+          height 10px
+          display none
+          /*position absolute
+          bottom 0
+          right 0*/
+          background #faff74 url('../img/cross.png') no-repeat center top
+          text-indent -99999px
+          vertical-align baseline
+        .close:hover
+          background-position center bottom
+      span.highlight:hover
+        color #889200
+        .close
+          display inline-block
+      .highlight::selection
+        background-color #e3e960
+      .highlight::-moz-selection
+        background-color #e3e960
+      form.choose-all
+        display inline-block
+        position absolute
+        right 0
+        top -16px
+        z-index 101
+        label
+          font-size 13px
+          line-height 13px
+          input
+            margin 0 6px 0 0
+            vertical-align middle
+
+    .full
+      padding 0 0 30px 0
+      margin 0
+
+    .no-hr
+      background none
+      padding-top 16px
+
+    .button-row
+      margin 24px 0 19px 0
+      text-align right
+      .button
+        display inline-block
+        font-size 14px
+      .green-btn
+        cursor pointer
+        background url('../img/green-bg.png') repeat-x top left
+        display inline-block
+        height 32px
+        padding 0 16px
+        line-height 32px
+        border-radius 6px
+        position relative
+        zoom 1
+        behavior url(/js/PIE.htc)
+        span.arrows
+          width 25px
+          height 32px
+          margin-left 16px
+          background url('../img/btn-arrows.png') no-repeat center right
+          display block
+          float right
+        a
+          font-size 14px
+          font-family 'OpenSansSemibold'
+          color #fff
+        a:hover
+          text-shadow 0px 0px 5px rgba(255,255,255,0.25)
+      a.text-link
+        float left
+        line-height 62px
+
+    .list-item:hover
+      background-color #f8f8f8
+
+    .statement-requests .article:last-child
+      background-image none
+
+    .statement-requests
+      .article
+        cursor pointer
+      .article:hover
+        background-color #f8f8f8
+      .article:last-child
+        background-image none
+
+    .notifications
+      .article
+        padding-bottom 70px
+        background-image none
+        background-color #f8f8f8
+        padding 24px 16px 80px 80px
+        margin 0 -16px
+        .alert-icon
+          position absolute
+          top 25px
+          left 17px
+          width 50px
+          height 47px
+          background transparent url('../img/alert-icon.png') no-repeat center top
+        .close
+          width 9px
+          height 10px
+          display block
+          position absolute
+          top 26px
+          right 16px
+          background transparent url('../img/cross.png') no-repeat center top
+          text-indent -99999px
+        .close:hover
+          background-position center bottom
+
+    .notifications, .statement-requests
+      .article
+        p
+          margin 0
+
+    .sort-list
+      width 100%
+      height 25px
+      margin-bottom 8px
+      .button-2
+        display inline-block
+        float right
+        margin-left 4px
+        cursor pointer
+      .button-2.active
+        background url(../img/navi-active-bg.png) repeat-x left top
+
+  .aside-extra, .aside
+    .label
+      width 164px
+      display inline-block
+      clear left
+      margin-bottom 16px
+      margin-top 5px
+    .opinion-distribution
+      width 81px
+      height 30px
+      margin 0 10px 0 0
+      float right
+      text-align right
+      position relative
+      .red-bar
+        position absolute
+        left 40px
+        top 4px
+        width 20px
+        height 8px
+        border 1px solid #c13e25
+        background url(../img/bar-red-bg.png) repeat-x left top
+        margin-top 6px
+      .divider
+        position absolute
+        top 4px
+        left 39px
+        width 1px
+        height 22px
+        background-color #a5c6d1
+      .green-bar
+        position absolute
+        top 4px
+        right 41px
+        width 20px
+        height 8px
+        border 1px solid #75a230
+        background url(../img/bar-green-bg.png) repeat-x left top
+        margin-top 6px
+    .legend
+      font-size 13px
+      margin-top 16px
+      .agree
+        background url(../img/marker-agree.png) no-repeat left center
+        margin-right 24px
+        padding-left 14px
+      .disagree
+        background url(../img/marker-disagree.png) no-repeat left center
+        padding-left 14px
+
+  .aside-notes
+    position absolute
+    right -303px
+    top 8px
+    width 250px
+    .label
+      margin 16px 0 8px 0
+      font-size 14px
+    .marking-short
+      font-size 13px
+      line-height 13px
+      background-color #faff74
+      padding 2px 1px
+      margin-bottom 6px
+      .close
+        margin 1px 2px 0 0
+        cursor pointer
+        width 9px
+        height 10px
+        display block
+        float right
+        background transparent url('../img/cross.png') no-repeat center top
+        text-indent -99999px
+      .close:hover
+        background-position center bottom
+
+  .aside
+    width 256px
+    float right
+    padding 26px 32px
+    .virtu-login
+      text-align right
+      vertical-align middle
+      span, a, a img
+        vertical-align middle
+      span
+        margin-right 16px
+      margin-bottom 32px
+    .new-statement-request
+      margin-bottom 64px
+    h2
+      font-size 18px
+      color #f57e02
+      font-family 'OpenSansSemibold'
+      font-weight normal
+      margin 32px 0 16px 0
+    .login-info
+      padding-bottom 30px
+      line-height 24px
+      h2
+        margin 0 0 8px 0
+        font-size 16px
+        color #333
+      .logged-user
+        background transparent url('../img/key-icon.png') no-repeat left center
+        padding-left 20px
+      a.logout
+        float right
+    .aside-divider
+      width 320px
+      height 1px
+      margin-left -32px
+      background-color #a5c6d1
+      margin-bottom 32px
+    .report
+      margin-bottom 32px
+      p
+        margin 16px 0 8px 0
+      p.small
+        font-size 13px
+        margin 16px 0 6px 0
+      a
+        line-height 20px
+        display block
+        margin 8px 0
+      .sharedperson
+        width 240px
+        float left
+        line-height 13px
+        padding 4px 5px 5px 6px
+        border 1px solid #FFF
+        margin-bottom 3px
+        border-radius 4px
+        -webkit-box-shadow 0px 1px 2px #6d6d6d
+        -mox-box-shadow 0px 1px 2px #6d6d6d
+        box-shadow 0px 1px 2px #6d6d6d
+      .confirmed
+        background #ebebeb url('../img/recipient-ok.png') no-repeat top right
+      .pending
+        background #e7e7e7 url('../img/recipient-pending.png') no-repeat 231px center
+        color #777
+        cursor pointer
+      .dropdown
+          float right
+          border-radius 6px
+          border 3px solid #f9f9f9
+          select
+            background-color #FFF
+            width 250px
+            height 32px
+            font-size 14px
+            color #333
+            padding 4px 0
+            border 1px solid #bababa
+            border-radius 6px
+            option
+              padding 4px 2px
+    .static
+      margin -8px 0 32px 0
+      font-size 16px
+      font-family 'OpenSansSemibold'
+      color #333
+
+
+.toggle-note-mode
+  display block
+  margin 5px 0 10px 4px
+  font-family 'OpenSansSemibold'
+  background transparent url('../img/toggle-note-mode.png') no-repeat left top
+  height 25px
+  line-height 24px
+  padding-left 32px
+  .inactive
+    display inline
+  .active
+    display none
+
+.page.adding-notes
+  .comment_text::selection
+    background-color #faff74
+  .comment_text::-moz-selection
+    background-color #faff74
+  .toggle-note-mode
+    background-position left -28px
+    .active
+      display inline
+    .inactive
+      display none
+
+#text-links1, #text-links2
+  line-height 16px
+  width 100%
+  display inline
+  z-index 100
+  float right
+  .show-all-link, .hide-all-link
+    float right
+  .hide-all-link
+    margin-left 20px
+
+.show-hide-icon
+  width 15px
+  height 13px
+  display inline-block
+  margin 0 0 -2px 7px
+  background url(../img/show-hide.png) no-repeat right center
+
+.show-help-icon
+  width 16px
+  height 16px
+  display inline-block
+  margin 0 0 -4px 7px
+  background url(../img/help-icon.png) no-repeat right center
+
+.show-all
+  display block
+
+.hide-all
+  display none
+
+#footer
+  color #666
+  .wrap
+    background transparent url('../img/footer-back.png') no-repeat center top
+    height 80px
+    p
+      margin 0
+      padding-top 20px
+      text-align center
+
+#page-etusivu .notifications
+  display none
+
+body.logged #page-etusivu .notifications
+  display block
+
+.aside .virtu-login
+  display block
+
+.aside .visible
+  display block
+
+body.logged .aside .login-info
+  display block
+
+#navi
+  width 634px
+  float left
+  margin 0 3px
+  background url('../img/green-bg.png') repeat-x top left
+  height 32px
+  padding 0
+  line-height 32px
+  border-radius 6px
+  position relative
+  zoom 1
+  behavior url(/js/PIE.htc)
+  ul
+    font-size 14px
+    font-family 'OpenSansSemibold'
+    color #fff
+    list-style-type none
+    margin 0
+    padding 0
+    height 32px
+    width 634px
+    overflow hidden
+    position relative
+    a
+      font-size 14px
+      font-family 'OpenSansSemibold'
+      color #fff
+    a:hover
+      text-shadow 0px 0px 5px rgba(255,255,255,0.25)
+    li
+      float left
+      padding 0 14px
+    li.active
+      background url(../img/navi-active-bg.png) repeat-x left top
+      position relative
+      .left
+        position absolute
+        left 0
+        display inline-block
+        width 6px
+        height 32px
+        background url(../img/navi-arrow-left.png) no-repeat left center
+      .link
+        float left
+      .right
+        position absolute
+        right 0
+        display inline-block
+        width 6px
+        height 32px
+        background url(../img/navi-arrow-right.png) no-repeat right center
+    li.end
+      border-top-right-radius 6px
+      border-bottom-right-radius 6px
+      padding 0 12px 0 15px
+      position absolute
+      right 0
+      zoom 1
+      behavior url("/css/PIE.htc")
+    li.inactive
+      color #ebedbb
+
+.modal
+  width 100%
+  height 100%
+  position fixed
+  top 0
+  left 0
+  z-index 101
+  background transparent url('../img/modal-overlay.png') repeat left top
+  .modal-box
+    background-color #f2f2f2
+    border 1px solid #FFF
+    box-shadow 0px 1px 4px #333
+    position relative
+    zoom 1
+    behavior url("/css/PIE.htc")
+
+#modal-share
+  display none
+  .modal-box
+    width 520px
+    position absolute
+    left 50%
+    margin-left -290px
+    top 144px
+    padding 4px 30px 20px 30px
+    .user
+      padding 20px
+      background transparent url('../img/hr.png') repeat-x left top
+      position relative
+      font-size 13px
+      .close
+        width 9px
+        height 10px
+        display block
+        position absolute
+        left 0
+        top 26px
+        background transparent url('../img/cross.png') no-repeat center top
+        text-indent -99999px
+        cursor pointer
+      .close:hover
+        background-position center bottom
+      .status
+        display inline
+        position absolute
+        right 0
+        select
+          font-size 13px
+    .add-users
+      background #fdfbec url('../img/hr.png') repeat-x left top
+      padding 10px
+      label
+        font-size 13px
+        margin-bottom 10px
+      input
+        width 100%
+        height 26px
+        clear both
+    .inactive
+        color #666
+        .status
+          margin-right 50px
+
+#modal-help
+  display none
+  p
+    color #FFFFFF
+    font-size 18px
+    margin 26px 0 16px 0
+    padding 0 20px
+    text-align center
+    line-height 20px
+  .bubble-container
+    width 960px
+    height 100%
+    margin 0 auto
+    position relative
+    .modal-bubble1
+      width 295px
+      height 162px
+      position absolute
+      top 117px
+      left 334px
+      background url('../img/help-bubble1.png') no-repeat left top
+      z-index 1000
+    .modal-dropdown
+      width 330px
+      height 76px
+      position absolute
+      top 244px
+      right 315px
+      background url('../img/help-dropdown.png') no-repeat left top
+      z-index 200
+    .modal-bubble2
+      width 486px
+      height 202px
+      position absolute
+      top 360px
+      left 100px
+      background url('../img/help-bubble2.png') no-repeat left top
+      z-index 1000
+    .modal-bubble3
+      width 371px
+      height 162px
+      position absolute
+      top 300px
+      right -28px
+      background url('../img/help-bubble3.png') no-repeat left top
+      z-index 1000
+    .modal-comments
+      width 304px
+      height 160px
+      position absolute
+      top 440px
+      right 8px
+      background url('../img/help-comments.png') no-repeat left top
+      z-index 200
+    .modal-bubble4
+      width 295px
+      height 162px
+      position absolute
+      top 580px
+      right 12px
+      background url('../img/help-bubble4.png') no-repeat left top
+      z-index 1000
+      p
+        margin 42px 0 16px 0
+    .modal-statement
+      width 645px
+      height 176px
+      position absolute
+      top 505px
+      left 5px
+      background url('../img/help-statement.png') no-repeat left top
+      z-index 200
+
+#modal-summary
+  position absolute
+  display none
+  padding-bottom 150px
+  .modal-box
+    width 840px
+    position absolute
+    left 50%
+    margin-left -450px
+    top 143px
+    padding 20px 30px
+  h2
+    background transparent url('../img/hr.png') repeat-x left bottom
+    padding-bottom 8px
+  .statement-static
+    font-size 13px
+    margin-bottom 16px
+    .info
+      padding 0 8px
+      background-color #fdfbec
+      border-left 4px solid #e9e2af
+      margin-bottom 2px
+      .name
+        float right
+      .title
+        font-weight bold
+    .highlighted_text
+      margin 0
+      font-size 13px
+      padding 8px
+      border-left 4px solid #faff74
+      background-color #FFF
+  a.summary-close
+    float right
+    padding 3px 8px 4px 8px
+    font-size 13px
+    border-radius 4px
+  .button-row
+    background transparent url('../img/hr.png') repeat-x left top
+    padding-top 24px
+
+#main #page-luo-yhteenveto .content .highlight .close
+  display none
+
+#main #page-luo-yhteenveto .sections
+  margin-top 32px
+
+#modal-disclaimer
+  background #fcfdfd url('../img/body-back.png') repeat-x left top
+  padding 0
+  margin 0
+  // display none
+  .disclaimer-content
+    width 760px
+    margin 30px auto 0 auto
+    .logo
+      width 760px
+      height 56px
+      display block
+      text-indent -99999px
+      background transparent url('../img/logo.png') no-repeat center top
+    .text
+      text-align center
+      margin 32px 0 32px 0
+    .buttons
+      position relative
+      height 42px
+      .scenario1, .scenario2
+        padding 6px 16px
+        font-size 14px
+        width 150px
+        height 42px
+      .scenario1
+        position absolute
+        left 0
+      .scenario2
+        position absolute
+        right 0
+    .footer
+      width 760px
+      position absolute
+      bottom 0
+      text-align center
+      font-size 13px
+      color #666
+      margin-bottom 16px
+      a
+        margin-left 6px
+
+#modal-scenario1-finish, #modal-scenario2-finish
+  display none
+  .modal-box
+    text-align center
+    width 400px
+    position absolute
+    left 50%
+    margin-left -200px
+    top 144px
+    padding 20px 30px
+    p
+      background: url("../img/recipient-ok.png") no-repeat left top
+      padding-left 20px
+
+
+
+

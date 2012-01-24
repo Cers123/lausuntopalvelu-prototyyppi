@@ -1,0 +1,100 @@
+.page#page-uusi-lausunto
+    .aside
+        .login-info.visible
+            h2 Tervetuloa, Maija-Leena!
+            span.logged-user Maija-Leena Mäkipää (SAK)
+            br
+            a.bullet(href='#').dummy Omat lausunnot
+            br
+            a.logout.button-2(href='#') kirjaudu ulos
+            div(style='clear:both;')
+        .aside-divider
+        h2 Lausunnon määräaika
+        p.static.nicedeadline
+            | 31.09.2012
+
+        .report
+            p
+                | Jaettu valmistelijoille:
+            .shared_to
+                a(href='#').sharedperson.pending.dummy Ei jaettu edelleen
+                div(style="clear:both;")
+            p.small
+               | Klikkaamalla lausunnonantajan nimeä saat näkyviin hänen kirjoittamansa lausunnot
+
+    #navi
+        ul.navi-links
+            li
+                a(href='/#/etusivu2') Etusivu
+            li
+                a(href='/#/tarkastele-ennen-lausuntoa') 2. Tarkastele
+            li.active
+                span.left
+                span.link
+                    a(href='/#/uusi-lausunto') 3. Anna lausunto
+                span.right
+    .content
+        a.share.button(href='#')
+            span Jaa
+        h2 Esitys laiksi sähköisten tienkäyttömaksujen keräämisjärjestelmistä
+        .article.full
+            .pagetop-info
+                p
+                    | Voit tutustua lähdetekstiin joko selaamalla sisältöä alla olevasta tiivistelmänäkymästä tai lataamalla lähdetekstin erillisenä tiedostona. Lausuntojen antaminen tapahtuu kappalekohtaisesti. Kappalekohtaisen lähdetekstin ja siihen viittaavan lausunnonantokentän saat näkyviin klikkaamalla halutun otsikon nimeä. Koko lähdetekstiä koskevat lausunnot voit antaa käyttämällä sivun lopussa olevaa tekstikenttää.
+                .attachments
+                    p
+                        | Lataa lausuntomateriaali tiedostona:
+                    a.pdf(href="#").dummy(style="margin-right:24px;") Lataa lähdeteksti PDF-tiedostona
+                    a.doc(href="#").dummy Lataa lähdeteksti DOC-tiedostona
+            div(style='clear:both;')
+
+        .article
+            .deadline
+                span.day 31
+                span.month syys
+                span.year 2011
+            .sections
+                .plaintitle#new-statement-chapter-id Otsikko
+                .visible.hide-all
+                    .source.text Tekstikappale
+                    .statement-static.commentbox
+                        .info
+                            a(href="#").name Maija-Leena Mäkipää (SAK)
+                            form
+                                input(type='radio', name='opinion', value='agree', checked='checked')
+                                | Samaa mieltä
+                                input(type='radio', name='opinion', value='disagree')
+                                | Eri mieltä
+                        form.ui-form.form-statement
+                            .field.textarea
+                                textarea(rows='4', name='text', placeholder='Kirjoita perustelut')
+            br
+            a.pdf(href="#").dummy Tallenna näkymä PDF-tiedostona
+            a.print(href="#").dummy(style="margin-left:24px;") Tulosta näkymä
+
+        h3.field-label Kirjoita lausunnon saateteksti
+        form.ui-form
+            .field.textarea
+                textarea(rows='8', name='statementcover', id='statementcover').editor
+
+        h3.field-label Kirjoita koko dokumenttia koskeva lausunto
+        form.ui-form
+            .field.textarea
+                textarea(rows='8', name='newstatement', id='newstatement').editor
+
+        .button-row
+            a.text-link(href="#").dummy Siirrä lausunto asianhallintajärjestelmään
+            a.button.dummy(href="#")(style="margin-right:20px;")
+                | Tallenna
+            a.button.scenario2(href='#')
+                | Lähetä
+
+    .statement-template.hide-all
+        .statement-static
+            .info
+                a(href="#").name.dummy Kommentoija
+                span.date.sharedpersondate Sample 1.1.1980
+                span.opinion.agree.agrees.sharedpersonagrees Totta
+                a(href="#").remove Poista kommentti
+                    span.remove-btn
+            p.comment_text Hyvää tavaraa

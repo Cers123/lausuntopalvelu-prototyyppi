@@ -1,0 +1,183 @@
+!!! html5
+html(lang="fi")
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        title Lausuntopalvelu
+
+        link(rel='stylesheet', href='/css/smoothness/jquery-ui-1.8.16.custom.css')
+        link(rel='stylesheet', href='/css/screen.css')
+        //if lte IE 8
+            link(rel='stylesheet', href='/css/ie.css')
+        script(src='js/jquery-1.7.1.min.js')
+        script(src='js/jquery-ui-1.8.16.custom.min.js')
+        script(src='js/raphael-min.js')
+        script(src='js/underscore-min.js')
+        script(src='js/async.min.js')
+        script(src='js/pure_min.js')
+        script(src='js/spine.js')
+        script(src='js/route.js')
+        script(src='js/split.js')
+        script(src='js/jquery.transparency.js')
+        script(src='uploader/fileuploader.js')
+        script(src='js/rangy-core.js')
+        script(src='js/rangy-cssclassapplier.js')
+        script(src='js/ckeditor/ckeditor.js')
+        script(src='js/ckeditor/adapters/jquery.js')
+        script(src='application.js')
+
+        link(rel='stylesheet', href='/js/ckeditor/plugins/omtemplatebutton/style.css')
+
+        script(type="text/javascript")
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-8690105-7']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+    body
+        div#top-disclaimer
+            | Tämä sivusto on Leonidas Oy:n tekemä prototyyppi oikeusministeriön lausuntopalvelusta.
+            a(href='#') Ota kantaa!
+        #header
+            .wrap
+                h1
+                    a(href='/#/') Lausuntopalvelu.fi
+                form#search(autocomplete='off')
+                    input.keyword(type='text', name='keyword', placeholder='Hae palvelusta...')
+                    input.go(type='submit', name='go', value='')
+                #accessibility
+                    a.lang.dummy(href='#') på svenska
+                    span.font-size
+                        | Tekstikoko:
+                        a.small.dummy.selected(href='#') A
+                        a.medium.dummy(href='#') A
+                        a.large.dummy(href='#') A
+
+
+        #main
+            .wrap
+                != partial('pages/etusivu')
+                != partial('pages/pyynto')
+                != partial('pages/lausuntopyynto')
+                != partial('pages/uusi-lausuntopyynto')
+                != partial('pages/tarkastele-pyyntoa')
+                != partial('pages/valitse-lausunnot')
+                != partial('pages/luo-yhteenveto')
+                != partial('pages/etusivu2')
+                != partial('pages/tarkastele-ennen-lausuntoa')
+                != partial('pages/uusi-lausunto')
+                div(style='clear:both;')
+
+        #footer
+            .wrap
+                p Lausuntopalvelu - lausuntopalvelu@om.fi - Tietoa palvelusta - Palaute
+
+.modal#modal-share
+    .modal-box
+        h3 Jakamisasetukset
+        p käyttöoikeudet tähän dokumenttiin
+        .users
+            .user.inactive
+                span.email olli.vetumainen@lvm.fi
+                span.status On omistaja
+            .user
+                span.close
+                span.email reija.riuska@om.fi
+                form.status
+                    select(name='')
+                        option(value='Voi muokata')
+                            .label Voi muokata
+                        option(value='Voi katsella')
+                            .label Voi katsella
+            .user
+                span.close
+                span.email taapo.keski-kyynyla@om.fi
+                form.status
+                    select(name='')
+                        option(value='Voi muokata')
+                            .label Voi muokata
+                        option(value='Voi katsella', selected='selected')
+                            .label Voi katsella
+        .user.hide-all.template
+            span.close
+            span.email Malli Käyttäjä
+            form.status
+                select(name='')
+                    option(value='Voi muokata', selected='selected')
+                        .label Voi muokata
+                    option(value='Voi katsella')
+                        .label Voi katsella
+        .add-users
+            form.ui-form
+                label Lisää käyttäjiä
+                input(type='text', name='email')
+        a.ready.button(href='#')
+            span Valmis
+
+.modal#modal-help
+    .bubble-container
+        .modal-bubble1
+            p Voit rajata näytettäviä lausuntoja valitsemalla sopivan lausunnonantajan listasta.
+        .modal-dropdown
+        .modal-bubble2
+            p Kappaleen keräämät lausunnot saat näkyviin klikkaamalla kappaleen otsikon harmaata palkkia. Perustelujen lisäksi näet lausunnoista antajan nimen, lausunnon antamisajankohdan ja mielipiteen. Lisäksi voit valita lausunnon mukaan yhteenvetoon.
+        .modal-bubble3
+            p Sivupalkki näyttää kappaleen keräämien lausuntojen määrän,  niihin tekemiesi korostusten määrän, sekä lausuntojen mielipidejakauman.
+        .modal-comments
+        .modal-bubble4
+            p Tekemäsi korostukset näkyvät listana, josta voit myös poistaa kommentit. Korostukset tallentuvat automaattisesti.
+        .modal-statement
+
+.modal#modal-summary
+    .modal-box
+        != partial('pages/yhteenveto')
+
+.modal#modal-disclaimer
+    .disclaimer-content
+        .logo
+        .text
+            p Tämä on prototyyppi Oikeusministeriön tulevasta, 2012 aikana hankittavasta ja toteutettavasta lausuntopalvelusta. Tulevan palvelun tavoitteena on mahdollistaa ns. lausuntopyyntömenettelyn toteuttaminen verkkopalvelun avulla. Prototyypissä on esimerkinomaisesti toteutettu joitain ns. käyttötapauksia – erityisesti valmistelevan virkamiehen kannalta lausuntopyynnön laadinta ja lausuntokoosteen tekoa helpottavia työkaluja ja lausunnonantajan (viranomainen tai esim. järjestö) kannalta lausunnon antaminen. Pääset tutustumaan prototyyppiin alla olevista linkeistä. Prototyyppiä ei ole suunniteltu toimimaan kaikilla selaimilla ja laitteilla.
+
+            p Huomaa, että tämä on sinänsä oikeaan vaatimusmäärittelyyn karkeasti perustuva esimerkkitoteutus, joka ei täytä järjestelmän lopullisia vaatimuksia. Varsinainen toteutus voi poiketa prototyypistä merkittävästi.
+
+            p
+                | Lausuntopalvelu on osa Osallistumisympäristö-hanketta (ks.&nbsp;
+                a(href='http://www.osallistumisymparisto.fi') www.osallistumisymparisto.fi
+                | ). Lisätietoja ja palautetta: osallistumisymparisto.om@om.fi.
+        .buttons
+            a.button.scenario1(href="#")
+                | Luo lausuntopyyntö
+                br
+                | ja tee yhteenveto
+            a.button.scenario2(href="#")
+                | Anna lausunto
+                br
+                | ja jaa muille
+        .text
+            p
+                | Osallistu tulevaa palvelua koskevaan kyselyyn
+                a(href='https://docs.google.com/a/leonidasoy.fi/spreadsheet/viewform?hl=en_US&formkey=dHVCYWNHdXdWU0YzU1pvX2tfbjlud3c6MA#gid=0', target='_blank') täällä
+                | .
+            p
+                a(href='http://www.om.fi', target='_blank') Oikeusministeriö - www.om.fi
+                br
+                a(href='http://www.leonidasoy.fi', target='_blank') Leonidas Oy - www.leonidasoy.fi
+
+        .footer
+            p Tämä prototyyppi on Leonidas Oy:n ProtoSonni, lue lisää osoitteesta
+                a(href="http://www.leonidasoy.fi") www.leonidasoy.fi
+
+.modal#modal-scenario1-finish
+    .modal-box
+        p
+            | Laatimasi yhteenveto tallennettiin onnistuneesti!
+        a.button.ready(href="/#") Sulje
+
+.modal#modal-scenario2-finish
+    .modal-box
+        p
+            | Lausunto lähetettiin onnistuneesti lausunnon pyytäjälle!
+        a.button.ready(href="/#/etusivu2") Palaa alkuun
+

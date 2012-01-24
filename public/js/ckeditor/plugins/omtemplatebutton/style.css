@@ -1,0 +1,7 @@
+.cke_skin_kama .cke_button_omtemplatebutton span.cke_icon {
+	display:none !important;
+}
+
+.cke_skin_kama .cke_button_omtemplatebutton .cke_label {
+    display: inline !important;
+}
